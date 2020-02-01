@@ -2,32 +2,48 @@ import React from "react";
 import PropTypes from "prop-types";
 import Tile from "./Tile";
 import Histogram from "./Histogram";
+import ProgressBar from "./ProgressBar";
 
 function DaysCompleted(props) {
-  console.log(props);
 
-  const { days } = props;
+  const { days, checkins } = props;
 
   const textStyle = {textAlign: 'center', color: '#BC9CFF'}
+  const divStyle = {
+   
+    display: 'grid',
+    gridTemplateColumns: '.8fr',
+    'grid-template-rows': '55px 80px 20px auto',
+
+    justifyContent: 'center',
+
+  }
 
   return (
    
       <Tile>
-        <h2 style={textStyle}> {days} Days Completed! </h2>
+        <div style={divStyle} id="wrapper">
+          <h2  style={textStyle}> {days} Days Completed! </h2>
+          
+          <Histogram barCount={7} bars={checkins.map(c => c.score * 5)} />   
+          <ProgressBar />
+          <h4 style={{color:'#1F2041'}}> <strong>50%</strong>  TO GOAL!</h4>
 
-        <Histogram />
-        
+        </div>
+    
+       
       </Tile>
 
   );
 }
 
 DaysCompleted.propTypes = {
-  days: PropTypes.number
+  days: PropTypes.number,
+  checkins: PropTypes.array.isRequired
 };
 
 DaysCompleted.defaultProps = {
-  days: 0
+  days: 0,
 };
 
 export default DaysCompleted;

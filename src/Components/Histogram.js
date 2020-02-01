@@ -10,8 +10,9 @@ function Bar(props) {
     height: "70.74px",
     borderRadius: "2px",
     display: "flex",
-    alignItems: "flex-end"
+    alignItems: "flex-end"   // align the inner bar to the end of the the outer box
   };
+
 
   const innerBar = {
     background:
@@ -34,28 +35,26 @@ Bar.propTypes = {
 };
 
 function Histogram(props) {
-
-
-
+  
+  const { bars, barCount } = props;
 
   const divStyle = {
     display: "flex",
     justifyContent: "space-around"
   };
 
-
   return (
     <div style={divStyle}>
-
-       {/** I am a comment in JSX. We will need to loop here based on teh number of bars passed in */}
-       {/** I am think bars can be a percentage value 0-100 e.g. [0,10,100] */}
-      <Bar percentage={80} />
+     
+      {bars.map((b,i) => i <= barCount ? <Bar  percentage={b}/> : "")}
+     
     </div>
   );
 }
 
 Histogram.propTypes = {
-  bars: PropTypes.array.isRequired
+  bars: PropTypes.array.isRequired,
+  barCount: PropTypes.number.isRequired
 };
 
 export default Histogram;
