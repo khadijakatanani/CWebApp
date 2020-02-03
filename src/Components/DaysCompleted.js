@@ -3,12 +3,20 @@ import PropTypes from "prop-types";
 import Tile from "./Tile";
 import Histogram from "./Histogram";
 import ProgressBar from "./ProgressBar";
+import styled from 'styled-components';
 
 function DaysCompleted(props) {
 
   const { days, checkins } = props;
 
+  const DaysCompleteHeading = styled.h2`
+   text-align: center;
+   color: #BC9CFF;
+  `;
+  
   const textStyle = {textAlign: 'center', color: '#BC9CFF'}
+  
+
   const divStyle = {
    
     display: 'grid',
@@ -23,7 +31,8 @@ function DaysCompleted(props) {
    
       <Tile>
         <div style={divStyle} id="wrapper">
-          <h2  style={textStyle}> {days} Days Completed! </h2>
+          
+          <DaysCompleteHeading>  {days} Days Completed!    </DaysCompleteHeading>
           
           <Histogram barCount={7} bars={checkins.map(c => c.score * 5)} />   
           <ProgressBar />
