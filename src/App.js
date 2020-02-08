@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import theme from "./config/theme.js";
 import { ThemeProvider } from "styled-components";
-import GlobalStyles from "./config/globalStyles";
+import GlobalStyles from "./config/GlobalStyles";
 
 import DaysCompleted from "./Components/DaysCompleted";
 

@@ -8,32 +8,32 @@ import styled from "styled-components";
 function DaysCompleted(props) {
   const { days, checkins } = props;
 
-  const DaysCompleteHeading = styled.h2`
+  const StyledDaysCompleteHeading = styled.h2`
     text-align: center;
-    color: #bc9cff;
+    color: ${ props => props.theme.colors.purple};
   `;
 
-  const RootDiv = styled.div`
+  const StyledRootDiv = styled.div`
     display: grid;
     grid-template-columns: 0.8fr;
     grid-template-rows: 55px 80px 20px auto;
     justify-content: center;
   `;
 
-  const GoalHeading = styled.h4`
+  const StyledGoalHeading = styled.h4`
     color: #1f2041;
   `;
   
   return (
     <Tile>
-      <RootDiv>
-        <DaysCompleteHeading> {days} Days Completed! </DaysCompleteHeading>
+      <StyledRootDiv>
+        <StyledDaysCompleteHeading> {days} Days Completed! </StyledDaysCompleteHeading>
         <Histogram barCount={7} bars={checkins.map(c => c.score * 5)} />
-        <ProgressBar />
-        <GoalHeading>
+        <ProgressBar percentage="50" />
+        <StyledGoalHeading>
           <strong>50%</strong> TO GOAL!
-        </GoalHeading>
-      </RootDiv>
+        </StyledGoalHeading>
+      </StyledRootDiv>
     </Tile>
   );
 }
