@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
 import theme from "./config/theme.js";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./config/GlobalStyles";
-
 import DaysCompleted from "./Components/DaysCompleted";
+import CheckinComment from "./Components/CheckinComment";
+import Header from "./Components/Header";
 
 const checkins = [
   {
@@ -57,10 +57,14 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
+        <Header />
         <GlobalStyles />
         <DaysCompleted days={15} checkins={checkins}>
           {" "}
         </DaysCompleted>
+       
+       <CheckinComment />
+
       </ThemeProvider>
     </div>
   );

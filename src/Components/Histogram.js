@@ -42,6 +42,9 @@ Bar.propTypes = {
   percentage: PropTypes.number.isRequired
 };
 
+
+
+
 function Histogram(props) {
   const { bars, barCount } = props;
 
