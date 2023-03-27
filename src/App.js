@@ -59,6 +59,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <GlobalStyles />
+        <Dash checkins={checkins}/>
         <DaysCompleted days={15} checkins={checkins}>
           {" "}
         </DaysCompleted>
