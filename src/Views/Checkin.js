@@ -8,7 +8,5 @@ const Checkin = (props) => {
             <h1> Checkin</h1>
         </div>
     )
-}
-
-  
+    }
 export default Checkin;

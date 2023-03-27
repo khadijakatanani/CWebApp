@@ -5,6 +5,16 @@ import GlobalStyles from "./config/GlobalStyles";
 import DaysCompleted from "./Components/DaysCompleted";
 import CheckinComment from "./Components/CheckinComment";
 import Header from "./Components/Header";
+import Dash from "./Views/Dash";
+import {
+  Route, 
+  useLocation
+}  from "react-router-dom";
+import Checkin from "./Views/Checkin.js";
+import Profile from "./Views/Dash";
+import Join from "./Views/Join";
+import Switch from "react-router-dom";
+
 
 const checkins = [
   {
@@ -59,12 +69,27 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <GlobalStyles />
-        <Dash checkins={checkins}/>
+        <Switch>
+          <Route path="./checkin">
+            <Checkin></Checkin>
+          </Route>
+          <Route path="./dash">
+            <Dash checkins={checkins}></Dash>
+          </Route>
+          <Route path="./join">
+            <Join></Join>
+          </Route>
+          <Route path="./profile">
+            <Profile></Profile>            
+          </Route>
+          <Route>
+            <div>404 Error</div>      
+          </Route>
+        </Switch>
         <DaysCompleted days={15} checkins={checkins}>
           {" "}
         </DaysCompleted>
        <CheckinComment />
-
       </ThemeProvider>
     </div>
   );

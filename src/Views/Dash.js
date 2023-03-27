@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 const Dash = (props) => {
@@ -15,6 +16,4 @@ Dash.propTypes = {
     checkins: PropTypes.array.isRequired
   };
   
-export default Dash;
-export default Dash;
 export default Dash;
