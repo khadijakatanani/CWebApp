@@ -63,7 +63,6 @@ function App() {
         <DaysCompleted days={15} checkins={checkins}>
           {" "}
         </DaysCompleted>
-       
        <CheckinComment />
 
       </ThemeProvider>

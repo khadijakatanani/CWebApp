@@ -48,4 +48,3 @@ DaysCompleted.defaultProps = {
 };
 
 export default DaysCompleted;
-

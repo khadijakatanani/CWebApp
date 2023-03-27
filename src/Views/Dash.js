@@ -11,7 +11,6 @@ const Dash = (props) => {
     )
 }
 
-
 Dash.propTypes = {
     checkins: PropTypes.array.isRequired
   };
