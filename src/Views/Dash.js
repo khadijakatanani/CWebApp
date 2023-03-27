@@ -15,8 +15,4 @@ Dash.propTypes = {
     checkins: PropTypes.array.isRequired
   };
   
-Dash.defaultProps = {
-    days: 0
-  };
-  
 export default Dash;

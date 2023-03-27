@@ -9,3 +9,6 @@ const Checkin = (props) => {
         </div>
     )
 }
+
+  
+export default Checkin;
