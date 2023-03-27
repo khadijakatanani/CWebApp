@@ -16,3 +16,5 @@ Dash.propTypes = {
   };
   
 export default Dash;
+export default Dash;
+export default Dash;
