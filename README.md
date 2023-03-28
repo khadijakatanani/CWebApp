@@ -10,5 +10,5 @@
 
 | Week | Command                                                                                                |
 | ---- | ------------------------------------------------------------------------------------------------------ |
-| 6    | `git clone -b week-6 https://github.com/khadijakatanani/CWebApp.git` |
+| 6    | `git clone -b Week-6 https://github.com/khadijakatanani/CWebApp.git` |
 
