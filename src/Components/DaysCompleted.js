@@ -28,8 +28,8 @@ function DaysCompleted(props) {
     <Tile>
       <StyledRootDiv>
         <StyledDaysCompleteHeading> {days} Days Completed! </StyledDaysCompleteHeading>
-        <Histogram barCount={7} bars={checkins.map(c => c.score * 5)} />
-        <ProgressBar percentage="50" />
+        <Histogram key={10} barCount={7} bars={checkins.map(c => c.score * 5)} />
+        <ProgressBar percentage= {50} />
         <StyledGoalHeading>
           <strong>50%</strong> TO GOAL!
         </StyledGoalHeading>

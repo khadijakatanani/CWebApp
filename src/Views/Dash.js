@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 const Dash = (props) => {
-    const { checkins } = props;
+    // const { checkins } = props;
 
     return(
         <div>
@@ -12,8 +12,8 @@ const Dash = (props) => {
     )
 }
 
-Dash.propTypes = {
-    checkins: PropTypes.array.isRequired
-  };
+// Dash.propTypes = {
+//     checkins: PropTypes.array.isRequired
+//   };
   
 export default Dash;

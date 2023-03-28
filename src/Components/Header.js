@@ -4,6 +4,8 @@ import styled from "styled-components";
 import avatarLarge from "../assets/avatar_small.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
+
 
 function Menu(props) {  
 

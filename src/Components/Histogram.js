@@ -33,7 +33,7 @@ function Bar(props) {
 
   return (
     <StyledBar>
-      <StyledInnerBar height={percentage}> </StyledInnerBar>
+      <StyledInnerBar height={percentage} key={10}> </StyledInnerBar>
     </StyledBar>
   );
 }

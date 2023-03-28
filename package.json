@@ -19,9 +19,9 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "start": "react-app-rewired start start",
-    "build": "react-app-rewired start build",
-    "test": "react-app-rewired start test",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts --openssl-legacy-provider test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
